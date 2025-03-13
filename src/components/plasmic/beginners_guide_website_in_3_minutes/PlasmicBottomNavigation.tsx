@@ -195,7 +195,7 @@ function PlasmicBottomNavigation__RenderFunc(props: {
               sty.text__fj801
             )}
           >
-            {"\uc815\uc801 \uc81c\ubaa9"}
+            {"Static Text !!!!! (This is Bottom Navi.)"}
           </div>
           <h2
             data-plasmic-name={"h2"}

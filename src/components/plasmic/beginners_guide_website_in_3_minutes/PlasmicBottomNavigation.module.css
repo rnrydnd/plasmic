@@ -35,6 +35,13 @@
   object-fit: cover;
   min-width: 0;
 }
+.text__fj801 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
 .h2 {
   position: relative;
   width: 100%;
@@ -86,7 +93,7 @@
   position: relative;
   height: 1em;
 }
-.text {
+.text__oI4G {
   white-space: pre;
 }
 .svg__eP60 {

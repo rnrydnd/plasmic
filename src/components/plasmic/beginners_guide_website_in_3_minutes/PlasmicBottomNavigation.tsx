@@ -93,7 +93,6 @@ export type PlasmicBottomNavigation__OverridesType = {
   h2?: Flex__<"h2">;
   freeBox?: Flex__<"div">;
   button?: Flex__<typeof Button>;
-  text?: Flex__<"div">;
 };
 
 export interface DefaultBottomNavigationProps {
@@ -189,6 +188,15 @@ function PlasmicBottomNavigation__RenderFunc(props: {
             url={"https://api.github.com/users/plasmicapp/repos"}
           />
 
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__fj801
+            )}
+          >
+            {"\uc815\uc801 \uc81c\ubaa9"}
+          </div>
           <h2
             data-plasmic-name={"h2"}
             data-plasmic-override={overrides.h2}
@@ -250,12 +258,10 @@ function PlasmicBottomNavigation__RenderFunc(props: {
                   key={currentIndex}
                   label={
                     <div
-                      data-plasmic-name={"text"}
-                      data-plasmic-override={overrides.text}
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text
+                        sty.text__oI4G
                       )}
                     >
                       <React.Fragment>
@@ -329,12 +335,11 @@ function PlasmicBottomNavigation__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "httpRestApiFetcher", "h2", "freeBox", "button", "text"],
+  root: ["root", "httpRestApiFetcher", "h2", "freeBox", "button"],
   httpRestApiFetcher: ["httpRestApiFetcher"],
   h2: ["h2"],
-  freeBox: ["freeBox", "button", "text"],
-  button: ["button", "text"],
-  text: ["text"]
+  freeBox: ["freeBox", "button"],
+  button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -345,7 +350,6 @@ type NodeDefaultElementType = {
   h2: "h2";
   freeBox: "div";
   button: typeof Button;
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -437,7 +441,6 @@ export const PlasmicBottomNavigation = Object.assign(
     h2: makeNodeComponent("h2"),
     freeBox: makeNodeComponent("freeBox"),
     button: makeNodeComponent("button"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicBottomNavigation
     internalVariantProps: PlasmicBottomNavigation__VariantProps,
